@@ -1,0 +1,40 @@
+Terraform:
+Infrastructure automation tool. 
+
+Core components:
+- Executable
+- Configuration Files
+- Provider Plugins (registry.terraform.io)
+- State Data
+
+Terraform Object Types:
+Providers
+Resources
+Data Sources
+
+Block syntax:
+block_type label name_label {
+  key = value
+  nested_block {
+    key = value
+  }
+}
+
+Terraform Object Reference:
+<resource_type>.<name_label>.<attribute>
+<resource_type>.<name_label>
+
+Comments:
+Single line : #
+Multi line  : /* */
+
+Terraform Workflow:
+init : 
+get provider plugins (terraform public registry or a specific location)
+get state data (local if no backend configured)
+plan:
+to verify what resources get created or destroyed (verifies with state file)
+apply:
+creates,modifies or destroys resources based on configuration,statefile comparison with environment
+destroy:
+destroy everything in the target environment with comparison to state data and environment.

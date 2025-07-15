@@ -1,0 +1,20 @@
+IAC: Infrastructure As Code
+Provisioning infrastructure through software(code) to achieveve consistent and predictable environments.
+
+Declarative Vs Imperative:
+Declarative is to define the end result and the system performs the task. (what)
+Imperative is to define steps on how to get the end result and the system follows the steps.(what and how)
+
+Idempotent And Consistent:
+Idempotent is to do a task repeatedly and the result should be the same (consistent) if no changes. (state)
+
+Push Or Pull:
+Push is when you give the code to perform a task. (Terraform)
+Pull is when code is taken to perform a task. (generally an agent)
+
+IAC Benefits:
+- Reusability (DRY)
+- Automated Deployment
+- Repeatable
+- Consistent environments
+- Documented Architecture
