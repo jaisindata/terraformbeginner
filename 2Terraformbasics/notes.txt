@@ -1,5 +1,9 @@
 Terraform:
-Infrastructure automation tool. 
+Infrastructure automation tool.
+The Terraform language is declarative, describing an intended goal rather than 
+the steps to reach that goal.
+Terraform only considers implicit and explicit relationships between resources 
+when determining an order of operations.
 
 Core components:
 - Executable

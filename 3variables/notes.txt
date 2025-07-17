@@ -1,0 +1,55 @@
+Types Of Variables:
+Input - Local - Output
+
+Input Variable Definition Syntax:
+syntax1:
+variable <name_label>
+
+syntax2:
+variable <name_label> {
+  type = value #datatype to be used
+  description = "string" #Describe the purpose of the variable
+  default = value #Default value to be used if no input is given
+  sensitive = true|false #boolean to determine the value to be logged unencrypted.
+}
+
+Input Variable Reference:
+var.<name_label>
+
+Terraform Datatypes:
+- Primitive:
+string, bool, num
+- Collection:
+list, set, map
+- Structural:
+tuple, object
+- Any:
+list(any)
+- Null
+
+Locals:
+Internal to the configuration.
+syntax:
+lacals {
+  key = value
+}
+reference:
+local.<key>
+
+Outputs:
+To retrieve a value at the end of the configuration run (apply).
+syntax:
+output "name_label" {
+  value = <reference>
+  description = "string"
+  sensitive = true|false
+}
+reference: output.<name_label>
+
+Linting:
+terraform fmt #to check if the code is in accordance to terraform standards (does not check syntax usually)
+- check #return the files to be formatted
+- recursive #format configuaration in working directory and any sub directories
+
+terraform validate #to check if your configuration is correct
+
