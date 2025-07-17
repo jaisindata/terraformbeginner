@@ -1,0 +1,12 @@
+Statefile:
+Consists of resources, datasources and outputs..
+Maps object ids to unique identifiers.
+diff is done b/w config and state data
+Locked during plan and apply
+Location: local , remote backend
+
+commands
+terraform state list #list all state resources.
+terraform state show <ADDRESS> #show a particular resource ADDRESS=<resource_type>.<name_label>
+terraform state move <SOURCE> <DESTINATION> #Move an item in state
+terraform state rm  <ADDRESS> #remove an item from state ADDRESS=<resource_type>.<name_label>
